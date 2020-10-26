@@ -10,6 +10,7 @@ class CashRegister
 
   def add_item(item, price, quantity = 1)
     @total += price * quantity
+    @cart << item
   end
 
   def apply_discount
@@ -19,6 +20,10 @@ class CashRegister
     else
       "There is no discount to apply."
     end
+  end
+
+  def items
+    
   end
 
 end
