@@ -29,7 +29,8 @@ class CashRegister
   end
 
   def void_last_transaction
-
+    @last_transaction[2].times(@cart.delete(@last_transaction[0]))
+    @total = @total - (@last_transaction[1] * @last_transaction[2])
   end
 
 end
