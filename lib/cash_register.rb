@@ -31,7 +31,7 @@ class CashRegister
 
   def void_last_transaction
     binding.pry
-    @last_transaction[2].times(@cart.delete(@last_transaction[0]))
+    @last_transaction[2].times{@cart.delete(@last_transaction[0])}
     @total = @total - (@last_transaction[1] * @last_transaction[2])
   end
 
